@@ -11,12 +11,36 @@
 /* ************************************************************************** */
 
 #include "minitalk.h"
+#include <stdio.h>
 
-int	main(void)
+int	main(int argc, char **argv)
 {
-	char	*pid;
+	pid_t 	pid;
+	int		idx;
+	int		div;
 
-	pid = ft_itoa(getpid());
-
-	write(1, pid, ft_strlen(pid));
+	if (argc != 3)
+		return (0);
+	pid = ft_atoi(argv[1]);
+	idx = 0;
+	while (argv[2][idx])
+	{
+		printf("\n argv : %c \n", argv[2][idx]);
+		printf("\n test : %d \n", 1 << 7);
+		div = 128;
+		while (1)
+		{
+			printf("\nif : %d \n", argv[2][idx] & div);
+			if (argv[2][idx] & div)
+				kill(pid, SIGUSR1);
+			else
+				kill(pid, SIGUSR2);
+			if (!div)
+				break;
+			div /= 2;
+			usleep(100);
+		}
+		idx++;
+	}
+	return (0);
 }

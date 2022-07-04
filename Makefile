@@ -17,20 +17,22 @@ LIBFT = libft
 NAME = client
 NAME1 = server
 
-OBJS = 
+OBJS = client.o
+OBJS1 = server.o
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(OBJS1)
 	make all -C $(LIBFT)
-	cc -Llibft -lft
+	cc -Llibft -lft $(OBJS) -o $(NAME)
+	cc -Llibft -lft $(OBJS1) -o $(NAME1)
 
 clean:
 	make clean -C $(LIBFT)
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS1)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(NAME1)
 	make fclean -C $(LIBFT)
 
 re: fclean all
