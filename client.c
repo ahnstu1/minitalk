@@ -6,7 +6,7 @@
 /*   By: hahn <hahn@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 16:34:49 by hahn              #+#    #+#             */
-/*   Updated: 2022/07/04 15:38:50 by hahn             ###   ########.fr       */
+/*   Updated: 2022/07/04 15:46:51 by hahn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(int argc, char **argv)
 {
-	pid_t 	pid;
+	pid_t	pid;
 	int		idx;
 	int		div;
 

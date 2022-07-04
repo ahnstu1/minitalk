@@ -6,7 +6,7 @@
 /*   By: hahn <hahn@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 16:34:54 by hahn              #+#    #+#             */
-/*   Updated: 2022/07/04 15:40:40 by hahn             ###   ########.fr       */
+/*   Updated: 2022/07/04 15:46:34 by hahn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ void	handler(int signum)
 		num *= 2;
 }
 
-int main(void)
+int	main(void)
 {
 	ft_putendl_fd(ft_itoa(getpid()), 1);
-    signal(SIGUSR1, handler);
+	signal(SIGUSR1, handler);
 	signal(SIGUSR2, handler);
 	while (1)
 		pause();
