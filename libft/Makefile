@@ -6,7 +6,7 @@
 #    By: hahn <hahn@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 16:30:03 by hahn              #+#    #+#              #
-#    Updated: 2022/06/27 16:29:53 by hahn             ###   ########.fr        #
+#    Updated: 2022/07/06 14:00:55 by hahn             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,7 +75,9 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re:
+	make fclean
+	make all
 
 bonus:
 	make BONUS_CHECK=1 all

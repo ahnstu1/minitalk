@@ -6,7 +6,7 @@
 #    By: hahn <hahn@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/21 15:29:25 by hahn              #+#    #+#              #
-#    Updated: 2022/07/06 09:08:40 by hahn             ###   ########.fr        #
+#    Updated: 2022/07/06 14:01:04 by hahn             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,8 @@ fclean: clean
 	rm -f $(NAME) $(NAME1)
 	make fclean -C $(LIBFT)
 
-re: fclean all
+re: 
+	make fclean
+	make all
 
 .PHONY: all clean fclean re
