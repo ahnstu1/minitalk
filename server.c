@@ -6,7 +6,7 @@
 /*   By: hahn <hahn@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/27 16:34:54 by hahn              #+#    #+#             */
-/*   Updated: 2022/07/06 13:51:13 by hahn             ###   ########.fr       */
+/*   Updated: 2022/07/06 13:52:17 by hahn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,19 +27,6 @@ void	handler(int signum)
 	}
 	else
 		num *= 2;
-}
-
-int	main(void)
-{
-	char	*pid;
-
-	pid = ft_itoa(getpid());
-	ft_putendl_fd(pid, 1);
-	signal(SIGUSR1, handler);
-	signal(SIGUSR2, handler);
-	while (1)
-		pause();
-	return (0);
 }
 
 int	main(void)
